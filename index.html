@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/globalStyles.css" />
+    <link rel="stylesheet" href="pages/home/index.css" />
+    <title>Git Search</title>
+  </head>
+  <body>
+    <main class="descriçao background pink display:flex width:100%">
+      <div class="dados">
+        <span class="spanTitle">
+          <h2 class="Tittle">Git Search</h2>
+          <h4 class="text">
+            Encontre e se conecte com profissionais de forma rápida e fácil
+          </h4>
+        </span>
+        <ul class="cards_selecionaos">
+          <li>
+            <p class="achados">Achados Recentemente:</p>
+            <img src="styles/Ellipse 1 (3).svg" alt="" />
+          </li>
+        </ul>
+      </div>
+      <div class="pesquisa">
+        <h1 class="procurarUser">Procurar usuario</h1>
+        <h5 class="textInput">usuario gitHub</h5>
+        <span class="input_btn">
+          <input
+            id="inputValue"
+            class="receiveEmail"
+            name="search"
+            type="search"
+            placeholder="Digite um nome de usuario"
+          />
+          <button
+            class="buttonPesquisar buttonText"
+            form="search"
+            type="submit"
+          >
+            Ver perfil do gitHub
+          </button>
+        </span>
+      </div>
+    </main>
+
+    <script type="module" src="pages/home/index.js"></script>
+    <script type="module" src="pages/profile/api.js"></script>
+  </body>
+</html>
