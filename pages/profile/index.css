@@ -33,7 +33,7 @@
 }
 .dadosUser {
   width: 100vw;
-  height: 250px;
+  height: 210px;
 }
 html {
   background-color: var(--color-grey-3);
@@ -97,14 +97,36 @@ header {
 #user {
   box-shadow: 0.5rem 0.5rem var(--color-grey-4);
 }
-ul {
-  width: 700px;
-  height: 400px;
+.repos {
+  /* max-width: 780px;
+  height: 431px;
+  display: flex;
+  gap: 43rem;
+  margin-left: 16rem; */
+
+  max-width: 61rem;
+  height: 71rem;
+  display: flex;
+  gap: 17rem;
+  margin-left: 16rem;
+}
+.ReposiUser {
+  height: 50rem;
+  display: flex;
+  /* flex-direction: row; */
+  flex-wrap: wrap;
+  /* margin: 0rem; */
+  gap: 3rem;
 }
 .conteinerRepo {
-  width: 381px;
-  height: 243px;
-  border: 0.5rem solid;
+  width: 383px;
+  height: 263px;
+  border: 1px solid;
+  border-color: var(--color-grey-2);
+  /* gap: 18px; */
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 .nomeRepo {
@@ -138,11 +160,13 @@ ul {
   font-weight: 500;
   line-height: 17px;
   color: var(--color-grey-7);
+  margin-top: 2rem;
+  margin-right: 14rem;
 }
 .branch {
   height: 2rem;
   width: 5rem;
-  margin-top: 2rem;
+  margin-top: -2rem;
   margin-left: 2rem;
   border-radius: 0.5rem;
   border: none;
