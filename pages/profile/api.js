@@ -1,22 +1,32 @@
 //
 
 export class api {
-  static async pesquisarUsuario(data) {
+  static async pesquisarUsuario(username) {
     const options = {
       method: "GET",
+      headers: { "Content-type": "application/json" },
     };
-    await fetch(" https://api.github.com/users/Denisguedes1", options)
+    console.log(username);
+    return await fetch(`https://api.github.com/users/${username}`, options)
       .then((resp) => resp.json())
-      .then((response) => console.log(response))
+      .then((response) => {
+        console.log(response);
+        return response;
+      })
       .catch((err) => console.log(err));
   }
-  static async getReposi() {
+  static async getReposi(username) {
     const options = {
       method: "GET",
     };
-    await fetch(" https://api.github.com/users/Denisguedes1/repos", options)
+    return await fetch(
+      `https://api.github.com/users/${username}/repos`,
+      options
+    )
       .then((resp) => resp.json())
-      .then((response) => console.log(response))
+      .then((response) => {
+        return response;
+      })
       .catch((err) => console.log(err));
   }
 }
