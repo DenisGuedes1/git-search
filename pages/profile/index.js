@@ -11,7 +11,7 @@ function verificarInput() {
 export async function retornarInput() {
   let username = verificarInput();
   let search = await api.pesquisarUsuario(username);
-  console.log(search.login);
+
   // let usuarioUsers = search;
   // console.log(usuarioUsers.name);
   let repositorio = await retornarRepo(search.login);
@@ -20,10 +20,18 @@ export async function retornarInput() {
   console.log(verificarInput());
   return repositorio;
 }
-function btnEvento() {
+export function btnEvento() {
   let btn = document.querySelector(".buttonPesquisar ");
   btn.addEventListener("click", async (e) => {
     e.preventDefault();
+    btn.innerHTML = "";
+
+    let imgBTN = document.createElement("img");
+    imgBTN.src = "/cycle_FILL0_wght400_GRAD0_opsz48.svg";
+    console.log(imgBTN);
+    imgBTN.classList.add("spinner");
+
+    btn.append(imgBTN);
     let username = verificarInput();
     let search = await api.pesquisarUsuario(username);
     let result = await retornarInput();
@@ -33,17 +41,23 @@ function btnEvento() {
 
     console.error(result);
 
-    if (result) {
-      window.location.replace("/pages/profile/index.html");
+    if (result.length > 0) {
+      setTimeout(() => {
+        window.location.replace("/pages/profile/index.html");
+      }, 2000);
       localStorage.getItem("@result:", result);
       localStorage.gettItem("@nome:", search);
     } else {
-      alert("usuario nao encontrado");
+      setTimeout(() => {
+        let alert = document.getElementById("alert");
+        alert.innerText = "Usuario não encontrado";
+      }, 2000);
     }
   });
 }
 btnEvento();
 
+function spinner() {}
 // avatar
 // nome
 // bio

@@ -71,9 +71,28 @@ header {
   color: var(--color-grey-6);
   margin: 5rem 0rem 0rem -14rem;
 }
-.span_Btn {
+.spinner {
   width: 80px;
   height: 10px;
+}
+.spinner {
+  width: 20px;
+  height: 10px;
+  animation: spinner 1.5s cubic-bezier(0.58, 0.75, 1, 1) infinite;
+  background-color: var(--color-grey-6);
+  -webkit-animation: spinner 1.5s cubic-bezier(0.58, 0.75, 1, 1) infinite;
+}
+@keyframes spinner {
+  0% {
+    transform: rotate(0);
+    -webkit-transform: rotate(0);
+    -moz-transform: rotate(0);
+    -ms-transform: rotate(0);
+    -o-transform: rotate(0);
+  }
+  100% {
+    tranform: rotate(360deg);
+  }
 }
 .trocarDeUser {
   height: 38px;
@@ -182,5 +201,13 @@ header {
   font-weight: 500;
   font-size: 14px;
   line-height: 17px;
+  color: var(--color-grey-7);
+}
+.text {
+  font-family: var(--font);
+  font-weight: 800;
+  font-size: 12px;
+  line-height: 22px;
+  margin-inline: 2rem;
   color: var(--color-grey-7);
 }

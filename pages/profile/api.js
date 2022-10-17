@@ -1,5 +1,4 @@
 //
-
 export class api {
   static async pesquisarUsuario(username) {
     const options = {
