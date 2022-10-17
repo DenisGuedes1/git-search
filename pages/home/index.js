@@ -37,6 +37,10 @@ async function renderUser() {
   const btntrocarUsers = document.createElement("button");
   btntrocarUsers.setAttribute("class", "trocarDeUser");
   btntrocarUsers.innerText = "trocar usuario";
+  btntrocarUsers.addEventListener("click", () => {
+    window.location.replace("../../index.html");
+    console.log("hoi");
+  });
   bioTag.setAttribute("class", "bio");
   // if (email === null) {
   //   btnEmail.innerText = email;
@@ -76,6 +80,9 @@ function renderRepo() {
     const btnEspeci = document.createElement("button");
     button.setAttribute("class", "buttonRepo");
     btnEspeci.setAttribute("class", "branch");
+    button.addEventListener("click", () => {
+      console.log(deployments_url);
+    });
 
     nomeRepo.innerText = elem.name;
     descricao.innerText = elem.description;

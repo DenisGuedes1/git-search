@@ -69,7 +69,7 @@ header {
   font-family: var(--font);
   font-weight: 500;
   color: var(--color-grey-6);
-  margin: 5rem 0rem 0rem -16rem;
+  margin: 5rem 0rem 0rem -14rem;
 }
 .span_Btn {
   width: 80px;
