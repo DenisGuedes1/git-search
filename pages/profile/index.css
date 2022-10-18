@@ -203,7 +203,17 @@ header {
   line-height: 17px;
   color: var(--color-grey-7);
 }
-.text {
+#alert {
+  font-family: var(--font);
+  font-weight: 800;
+  font-size: 12px;
+  line-height: 22px;
+  margin-inline: 2rem;
+  color: var(--color-grey-7);
+  display: block;
+}
+.text_display {
+  display: flex;
   font-family: var(--font);
   font-weight: 800;
   font-size: 12px;

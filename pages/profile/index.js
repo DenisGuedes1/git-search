@@ -20,6 +20,7 @@ export async function retornarInput() {
   console.log(verificarInput());
   return repositorio;
 }
+
 export function btnEvento() {
   let btn = document.querySelector(".buttonPesquisar ");
   btn.addEventListener("click", async (e) => {
@@ -27,7 +28,8 @@ export function btnEvento() {
     btn.innerHTML = "";
 
     let imgBTN = document.createElement("img");
-    imgBTN.src = "/cycle_FILL0_wght400_GRAD0_opsz48.svg";
+    imgBTN.src = "./assets/loading-spinner-svgrepo-com.svg";
+    // imgBTN.alt = "spinner";
     console.log(imgBTN);
     imgBTN.classList.add("spinner");
 
