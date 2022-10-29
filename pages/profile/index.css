@@ -69,7 +69,10 @@ header {
   font-family: var(--font);
   font-weight: 500;
   color: var(--color-grey-6);
-  margin: 5rem 0rem 0rem -14rem;
+  /* margin: 5rem 0rem 0rem -14rem; */
+  /* margin: 5rem 0rem 0rem 0rem; */
+  position: fixed;
+  margin: 6rem 0rem 0rem 7rem;
 }
 .spinner {
   width: 80px;

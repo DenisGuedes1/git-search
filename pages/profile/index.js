@@ -23,6 +23,22 @@ export async function retornarInput() {
 
 export function btnEvento() {
   let btn = document.querySelector(".buttonPesquisar ");
+  let input = document.getElementById("inputValue");
+
+  btn.disabled = true;
+  if (btn.disabled) {
+    btn.style.cursor = "not-allowed";
+  }
+  input.addEventListener("keyup", (event) => {
+    if (event.target.value.length !== 0) {
+      btn.disabled = false;
+      btn.style.cursor = "pointer";
+    } else {
+      btn.disabled = true;
+      btn.style.cursor = "not-allowed";
+    }
+  });
+
   btn.addEventListener("click", async (e) => {
     e.preventDefault();
     btn.innerHTML = "";
@@ -40,6 +56,7 @@ export function btnEvento() {
     console.log("hoi");
     localStorage.setItem("@result:", JSON.stringify(result));
     localStorage.setItem("@nome:", JSON.stringify(search));
+    localStorage.setItem("@hystori:", JSON.stringify(search));
 
     console.error(result);
 
@@ -57,9 +74,25 @@ export function btnEvento() {
     }
   });
 }
+
 btnEvento();
 
-function spinner() {}
+function pesquisados() {
+  let result = JSON.parse(localStorage.getItem("@hystori:"));
+  console.log(result);
+  console.log(result.url);
+
+  const ul = document.querySelector(".cards_selecionaos");
+  const li = document.createElement("li");
+  const img = document.createElement("img");
+  img.setAttribute("class", "imgPesquisados");
+
+  img.src = result.avatar_url;
+
+  li.appendChild(img);
+  ul.appendChild(li);
+}
+pesquisados();
 // avatar
 // nome
 // bio
